@@ -64,7 +64,7 @@ class SinzCardinalityEncoder:
                 g.add_clause([-x_i, -s_prev, s_curr])
 
         # (4) ¬x_i ∨ ¬s(i-1,k)
-        for i in range(1, n):
+        for i in range(k, n):
 
             x_i = vars[i]
             s_prev_k = self._s(i - 1, k - 1)
